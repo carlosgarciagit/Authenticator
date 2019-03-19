@@ -23,6 +23,14 @@ function keyUpRecord(e) {
   }
 }
 
+function setNewCreds() {
+  var credRef = db.ref("credData");
+  credRef.set(passwordTimes);
+
+  var lengthRef = db.ref("passwordLength");
+  lengthRef.set(passwordTimes.length);
+}
+
 function sendPasswordToDB() {
   var dataRef = db.ref("loginData");
   dataRef.set(passwordTimes);
