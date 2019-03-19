@@ -1,0 +1,40 @@
+<html>
+<head>
+  <link rel="stylesheet" href="stylesheets/index.css"/>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyDalLMFokRStD376mIQ-TpLDn-e-bI2x7U",
+      authDomain: "authenticator-13e56.firebaseapp.com",
+      databaseURL: "https://authenticator-13e56.firebaseio.com",
+      projectId: "authenticator-13e56",
+      storageBucket: "authenticator-13e56.appspot.com",
+      messagingSenderId: "230160210136"
+    };
+    firebase.initializeApp(config);
+  </script>
+  
+  <script src="scripts/login.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="main">
+
+      <h2>Authenticator</h2>
+      <form id="form_id" method="post" name="myform">
+
+      <label>User Name :</label>
+      <input type="text" name="username" id="username"/>
+
+      <label>Password :</label>
+      <input type="password" name="password" id="password"/>
+
+      <input type="button" value="Login" id="submit" onclick="validate()"/>
+      </form>
+
+    </div>
+  </div>
+</body>
+
+</html>
